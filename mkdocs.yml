@@ -2,8 +2,21 @@ site_name: Implementing Matrices
 
 theme:
     name: material
+    features:
+        - navigation.tracking
+        - navigation.sections
+        - navigation.instant
+        - toc.integrate
+        - instant
+    icon:
+        repo: fontawesome/brands/github
+
+repo_url: https://www.github.com/Wuelle/array_docs
+repo_name: Wuelle/array_docs
 
 markdown_extensions:
+  - attr_list
+  - md_in_html
   - pymdownx.arithmatex:
       generic: true
 
@@ -12,4 +25,6 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
-
+plugins:
+  - git-revision-date-localized
+  - search
