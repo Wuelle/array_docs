@@ -14,7 +14,7 @@
     
     
       
-        <title>How are matrices stored in memory? - Implementing Arrays</title>
+        <title>Memory Alignment - Implementing Arrays</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-are-matrices-stored-in-memory" class="md-skip">
+        <a href="#memory-alignment" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How are matrices stored in memory?
+              Memory Alignment
             
           </span>
         </div>
@@ -233,7 +233,7 @@
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        Welcome
+        Home
       </a>
     </li>
   
@@ -245,107 +245,25 @@
 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../../Credits/" class="md-nav__link">
-        Credits
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../useful_links/" class="md-nav__link">
-        Links
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4">
-          Implementation
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Implementation" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Implementation
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Implementation/Chapter1/" class="md-nav__link">
-        Chapter1
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
     
   
   
     
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_5">
+        <label class="md-nav__link" for="__nav_2">
           Theory
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Theory" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Theory
         </label>
@@ -358,7 +276,21 @@
   
     <li class="md-nav__item">
       <a href="../Chapter1/" class="md-nav__link">
-        What is a matrix?
+        What is an array?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter2/" class="md-nav__link">
+        How are arrays stored in memory?
       </a>
     </li>
   
@@ -381,12 +313,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          How are matrices stored in memory?
+          Memory Alignment
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        How are matrices stored in memory?
+        Memory Alignment
       </a>
       
         
@@ -404,15 +336,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#row-major-ordering-or-c-ordering" class="md-nav__link">
-    Row-major Ordering (or "c" Ordering)
+  <a href="#what-is-a-word" class="md-nav__link">
+    What is a Word?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#column-major-ordering-or-f-ordering" class="md-nav__link">
-    Column-major Ordering (or "f" Ordering)
+  <a href="#implications" class="md-nav__link">
+    Implications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alignment" class="md-nav__link">
+    Alignment
   </a>
   
 </li>
@@ -428,6 +367,98 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Implementation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Implementation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Implementation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/onedimensional/" class="md-nav__link">
+        One-dimensional Array
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/multidimensional/" class="md-nav__link">
+        Multidimensional Arrays
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../credits/" class="md-nav__link">
+        Credits
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../useful_links/" class="md-nav__link">
+        Links
+      </a>
     </li>
   
 
@@ -458,15 +489,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#row-major-ordering-or-c-ordering" class="md-nav__link">
-    Row-major Ordering (or "c" Ordering)
+  <a href="#what-is-a-word" class="md-nav__link">
+    What is a Word?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#column-major-ordering-or-f-ordering" class="md-nav__link">
-    Column-major Ordering (or "f" Ordering)
+  <a href="#implications" class="md-nav__link">
+    Implications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alignment" class="md-nav__link">
+    Alignment
   </a>
   
 </li>
@@ -484,36 +522,32 @@
               
                 
                 
-                <h1 id="how-are-matrices-stored-in-memory">How are matrices stored in memory?</h1>
-<p>As mentioned before, matrices are multidimensional. Since computer memory
-is one-dimensional, we need to flatten the matrix.
-This is where strides come into play. A stride is the number of bytes between elements
-in memory.
-The array stride is usually equal to the element size. (Unless the matrix is padded)</p>
-<p>This means that a minimal array implementation contains the following data:</p>
-<ul>
-<li>The address of the first element</li>
-<li>The stride of the array</li>
-<li>The dimensions of the array</li>
-</ul>
-<p>By knowing these three things, we can computer the address of any given index.</p>
-<p>There are mainly two different ways to project a n-dimensional array into 1-dimensional space.</p>
-<h2 id="row-major-ordering-or-c-ordering">Row-major Ordering (or "c" Ordering)</h2>
-<p>Concatenate all the rows together. This is the common approach for high-level languages.
-It means that for a matrix <span class="arithmatex">\(A\)</span> of size <span class="arithmatex">\(m\times{n}\)</span> with a stride of 1, the elements
-<span class="arithmatex">\(A_{i, j}\)</span> and <span class="arithmatex">\(A_{i, j+1}\)</span> are 1 byte apart and the elements <span class="arithmatex">\(A_{i, j}\)</span> and <span class="arithmatex">\(A_{i+1, j}\)</span>
-are n bytes apart.
-Notable languages that use Row-major Ordering are C, C++ and Java.</p>
-<h2 id="column-major-ordering-or-f-ordering">Column-major Ordering (or "f" Ordering)</h2>
-<p>Concatenate all columns together. This approach seems to be less popular.
-It means that for a matrix <span class="arithmatex">\(A\)</span> of size <span class="arithmatex">\(m\times{n}\)</span> with a stride of 1, the elements
-<span class="arithmatex">\(A_{i, j}\)</span> and <span class="arithmatex">\(A_{i+1, j}\)</span> are 1 byte apart and the elements <span class="arithmatex">\(A_{i, j}\)</span> and <span class="arithmatex">\(A_{i, j+1}\)</span>
-are m bytes apart.
-Notable languages that use Row-major Ordering are Fortran and Julia</p>
-<p>There is no difference in performance between the two. 
-Both provide element lookup at <span class="arithmatex">\(O(1)\)</span>.
-The mapping you choose only affects implementation details,
-i.e you should always traverse the array row by row if you use Row-major Ordering.</p>
+                <h1 id="memory-alignment">Memory Alignment</h1>
+<h2 id="what-is-a-word">What is a Word?</h2>
+<p>A word is defined as the amount of data the processor can load into its registers 
+with a single instruction.
+The CPU cannot load data from every memory address. 
+Instead, it can only load words starting at an address in memory that is a word boundary.</p>
+<p>The size of a word is highly dependent on the CPU Architecture, with 32 and 64bit being the
+most common in modern processors.
+Because of this limitation, the CPU can only access the memory in chunks, transferring 
+one chunk at a time using either a <code class="highlight">LDR</code> or a <code class="highlight">STR</code> Instruction</p>
+<h2 id="implications">Implications</h2>
+<p>This means that if a value in memory does not start at a word boundary, the processor will
+have to load more words, resulting in more instructions and lower performance.
+If the CPU has to perform more than one instruction, the whole process is no longer atomic,
+meaning that other processes may interfere with the data as it is being read, causing undefined
+behaviour.</p>
+<h2 id="alignment">Alignment</h2>
+<p>A value is aligned if it starts at a memory address that is a multiple of the processors
+word size. If that is not the case, it is misaligned.
+Aligning your data is always a tradeoff: If you perfectly align everything you will end
+up with a lot of padding to fill the empty space to the next word boundary, thereby wasting
+memory.
+If you tightly pack the data and don't align anything, you will use less memory but decrease
+performance.
+In general, aligning values is to be <strong>strongly</strong> preferred. While accessing unaligned values
+will <em>only</em> decrease performance on x86, some ARM chips might fault.</p>
                 
                   
                     
@@ -547,7 +581,7 @@ i.e you should always traverse the array row by row if you use Row-major Orderin
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../Chapter1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: What is a matrix?" rel="prev">
+        <a href="../Chapter2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: How are arrays stored in memory?" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -556,11 +590,26 @@ i.e you should always traverse the array row by row if you use Row-major Orderin
               <span class="md-footer__direction">
                 Previous
               </span>
-              What is a matrix?
+              How are arrays stored in memory?
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../../implementation/onedimensional/" class="md-footer__link md-footer__link--next" aria-label="Next: One-dimensional Array" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              One-dimensional Array
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   
@@ -585,7 +634,7 @@ i.e you should always traverse the array row by row if you use Row-major Orderin
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.sections", "navigation.instant", "instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.instant", "instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.1e84347e.min.js"></script>
