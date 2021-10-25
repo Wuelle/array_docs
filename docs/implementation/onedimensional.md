@@ -2,9 +2,9 @@
 ## Prerequisites
 This Implementation Chapter requires understanding of the following Theory Chapters:
 
-* [What is an array?](../Theory/Chapter1.md)
-* [How are arrays stored in memory?](..//Theory/Chapter2.md)
-* [Memory Alignment](..//Theory/Chapter3.md)
+* [What is an array?](../theory/Chapter1.md)
+* [How are arrays stored in memory?](../theory/Chapter2.md)
+* [Memory Alignment](../theory/Chapter3.md)
 
 ## Dependencies
 Since we are going to be working with raw memory, we need to be able to allocate specific amounts of heap memory.
