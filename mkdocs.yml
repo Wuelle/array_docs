@@ -55,5 +55,7 @@ nav:
     - "Implementation":
         - "implementation/onedimensional.md"
         - "implementation/multidimensional.md"
+        - "implementation/initialization.md"
+        - "implementation/benchmarking.md"
     - Credits: "credits.md"
     - Links: "useful_links.md"
